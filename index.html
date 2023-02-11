@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri + React + TS</title>
+    <style>
+            .chessboard {
+              border-collapse: collapse;
+              width: 360px;
+              height: 400px;
+            }
+
+            td {
+              width: 40px;
+              height: 40px;
+              text-align: center;
+              vertical-align: middle;
+              border: 1px solid black;
+            }
+
+            tr:nth-child(1) td:nth-child(2),
+            tr:nth-child(1) td:nth-child(8),
+            tr:nth-child(3) td:nth-child(2),
+            tr:nth-child(3) td:nth-child(8),
+            tr:nth-child(8) td:nth-child(2),
+            tr:nth-child(8) td:nth-child(8) {
+              font-weight: bold;
+              font-size: 24px;
+            }
+
+            tr:nth-child(1) td:nth-child(2),
+            tr:nth-child(1) td:nth-child(8) {
+              background-color: #FFA07A;
+            }
+
+            tr:nth-child(3) td:nth-child(2),
+            tr:nth-child(3) td:nth-child(8),
+            tr:nth-child(8) td:nth-child(2),
+            tr:nth-child(8) td:nth-child(8) {
+              background-color: #F0E68C;
+            }
+
+            .cross-point {
+              border: none;
+              background-color: black;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+            }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>  
+  </body>
+</html>
